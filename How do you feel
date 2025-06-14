@@ -1,0 +1,14 @@
+Daily Reflection Journal PWA - Description
+Description:
+A beautiful, mindful Progressive Web App designed for daily self-reflection and personal growth. This innovative journal combines mood tracking, guided reflection prompts, and gratitude practice in a seamless, offline-capable experience. Users can document their daily thoughts, track emotional patterns, and build a consistent mindfulness practice through thoughtfully crafted prompts that change daily.
+
+Key Features:
+Daily Reflection Prompts - Rotating collection of 15 thought-provoking questions
+Mood Tracking - Visual emoji-based mood selection with 5 emotional states
+Gratitude Practice - Three daily gratitude entries to foster positivity
+Offline Functionality - Works completely offline with service worker caching
+Auto-Save - Automatic saving every 30 seconds to prevent data loss
+History View - Browse and review past entries with beautiful timeline
+PWA Installation - Installable on mobile devices like a native app
+Responsive Design - Perfect experience across all devices
+Dark Mode Support - Automatic dark/light theme based on system preference
