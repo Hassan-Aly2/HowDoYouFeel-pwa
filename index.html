@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Reflection</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="A mindful daily reflection journal for personal growth">
+    <meta name="theme-color" content="#4F46E5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Daily Reflection">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">✨ Daily Reflection</h1>
+                <button id="installBtn" class="install-btn hidden">Install App</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Today's Entry -->
+            <section class="entry-section">
+                <div class="date-header">
+                    <h2 id="currentDate"></h2>
+                    <button id="prevDay" class="nav-btn">‹</button>
+                    <button id="nextDay" class="nav-btn">›</button>
+                </div>
+
+                <!-- Mood Selector -->
+                <div class="mood-section">
+                    <h3>How are you feeling today?</h3>
+                    <div class="mood-selector">
+                        <button class="mood-btn" data-mood="amazing">🤩</button>
+                        <button class="mood-btn" data-mood="happy">😊</button>
+                        <button class="mood-btn" data-mood="neutral">😐</button>
+                        <button class="mood-btn" data-mood="sad">😢</button>
+                        <button class="mood-btn" data-mood="stressed">😰</button>
+                    </div>
+                </div>
+
+                <!-- Reflection Prompts -->
+                <div class="reflection-section">
+                    <div class="prompt-card">
+                        <h3>Today's Reflection</h3>
+                        <p class="prompt-text" id="todayPrompt"></p>
+                        <textarea 
+                            id="reflectionText" 
+                            placeholder="Write your thoughts here..."
+                            rows="6"
+                        ></textarea>
+                    </div>
+
+                    <div class="gratitude-card">
+                        <h3>Three things I'm grateful for:</h3>
+                        <input type="text" id="gratitude1" placeholder="1. Something I'm grateful for..." maxlength="100">
+                        <input type="text" id="gratitude2" placeholder="2. Something I'm grateful for..." maxlength="100">
+                        <input type="text" id="gratitude3" placeholder="3. Something I'm grateful for..." maxlength="100">
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <button id="saveEntry" class="save-btn">Save Today's Entry</button>
+            </section>
+
+            <!-- Past Entries -->
+            <section class="history-section">
+                <button id="toggleHistory" class="toggle-btn">View Past Entries</button>
+                <div id="historyContainer" class="history-container hidden">
+                    <div id="entriesList" class="entries-list"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Take a moment each day to reflect and grow 🌱</p>
+        </footer>
+
+        <!-- Notification -->
+        <div id="notification" class="notification hidden">
+            <span id="notificationText"></span>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
